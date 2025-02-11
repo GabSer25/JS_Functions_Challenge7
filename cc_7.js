@@ -47,3 +47,15 @@ function calculateShippingCost(weight, location, expedited = false) {
 // Test cases
 console.log(calculateShippingCost(10, "USA", true)); // Expected: "Shipping Cost: $20.00"
 console.log(calculateShippingCost(5, "Canada", false)); // Expected: "Shipping Cost: $13.50"
+
+// Task 5: Business Loan Interest Calculation
+
+// Function to calculate total loan interest
+function calculateLoanInterest(principal, rate, years) {
+    let interest = principal * rate * years;
+    return `Total Interest: $${interest.toFixed(2)}`;
+}
+
+// Test cases
+console.log(calculateLoanInterest(1000, 0.05, 3)); // Expected: "Total Interest: $150.00"
+console.log(calculateLoanInterest(5000, 0.07, 5)); // Expected: "Total Interest: $1750.00"
