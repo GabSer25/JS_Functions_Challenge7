@@ -90,3 +90,16 @@ function createBudgetTracker() {
 let budget = createBudgetTracker();
 console.log(budget(300)); // Expected: "Current Balance: -$300"
 console.log(budget(200)); // Expected: "Current Balance: -$500"
+
+// Task 8: Business Growth Projection
+
+// Recursive function to calculate revenue growth
+function calculateGrowth(years, revenue) {
+    if (years === 10) return `Projected Revenue: $${revenue.toFixed(2)}`;
+    
+    return calculateGrowth(years + 1, revenue * 1.05);
+}
+
+// Test cases
+console.log(calculateGrowth(8, 1000)); // Expected: "Projected Revenue: $1102.50"
+console.log(calculateGrowth(5, 5000)); // Expected: "Projected Revenue: $5525.63"
